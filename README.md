@@ -6,6 +6,7 @@ This script will takes a .txt argument. The .txt should can be created with the 
 
 Beacons:
 ``` tshark -r <pcap> -Y wlan.fc.type_subtype==8 -T fields -e wlan.bssid -e wlan.ssid | sort | uniq > <output.txt>```
+
 Probe Requests:
 ``` tshark -r <pcap> -Y wlan.fc.type_subtype==4 -T fields -e wlan.sa -e wlan.ssid  | sort | uniq > <output.txt>```
 
